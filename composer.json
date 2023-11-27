@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mikecao/flight": "^2.0",
+        "j4mie/idiorm": "^1.5",
+        "zircote/swagger-php": "^4.7"
+    }
+}
