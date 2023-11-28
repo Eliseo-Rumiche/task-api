@@ -6,12 +6,6 @@ ORM::configure('username', 'root');
 ORM::configure('password', '');
 
 require ROOT_DIR.'/src/routers/tasks.routes.php';
+require ROOT_DIR.'/src/routers/documentation.routers.php';
 
-Flight::route(
-    'GET /docs', function () {
-        $openapi =  \OpenApi\Generator::scan(['./src/controllers/']);
-        header('Content-Type: application/json');
-        echo $openapi->toJson();
-    }
-);
 flight::start();

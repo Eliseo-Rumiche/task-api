@@ -3,15 +3,15 @@ require ROOT_DIR.'/src/models/tasks.model.php';
 use OpenApi\Annotations as OA;
 
 /**
- * @OA\Info(title="Task Api", version="0.1")
+ * @OA\Info(title="Task Api", version="0.1", description="Task Api using Fligth php and Idiorm")
  */
 class TaskController
 {
 
-
     /**
      * @OA\Post(
      *     path="/api/tasks/",
+     *     tags={"Tasks"},
      * @OA\RequestBody(
      *         required=true,
      * @OA\JsonContent(
@@ -41,6 +41,7 @@ class TaskController
     /**
      * @OA\Get(
      *     path="/api/tasks/",
+     *     tags={"Tasks"},
      * @OA\Response(response="200", description="Get All Tasks")
      * )
      */
@@ -53,6 +54,7 @@ class TaskController
     /**
      * @OA\Get(
      *     path="/api/tasks/{id}",
+     *     tags={"Tasks"},
      * @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -74,6 +76,7 @@ class TaskController
     /**
      * @OA\Delete(
      *     path="/api/task/{id}",
+     *     tags={"Tasks"},
      * @OA\Parameter(
      *         name="id",
      *         in="path",
@@ -98,6 +101,7 @@ class TaskController
     /**
      * @OA\Put(
      *     path="/api/tasks/{id}",
+     *     tags={"Tasks"},
      * @OA\Parameter(
      *         name="id",
      *         in="path",
